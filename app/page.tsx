@@ -1,10 +1,12 @@
+"use client";
+import { useAppContext } from "./contexto/AppContext";
+
 export default function Home() {
+  const { nombre } = useAppContext();
   return (
     <div>
       <br />
-      <p>Home :)</p>
-      <br />
-      <p>En esta sección se encuentran los ejemplos de props y children</p>
+      <p>Hola {nombre}</p>
     </div>
   );
 }

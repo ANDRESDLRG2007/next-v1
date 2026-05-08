@@ -1,11 +1,15 @@
+"use client";
 import Props from "./props";
+import { useAppContext } from "../contexto/AppContext";
+
 export default function Uno() {
-  
+  const { nombre } = useAppContext();
+
   return (
     <div>
-      <br />
-      <p>Uno :)</p>
-      <Props nombre={"este es un prop"}/>
+      uno
+      <Props nombre="este es un props" />
+      {nombre}
     </div>
   );
 }
